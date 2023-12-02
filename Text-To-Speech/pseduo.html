@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Text-to-Speech Extension</title>
+    <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <div id="Chatbot">
+        Hello, I can help you with your problems.
+        <br>
+        <img src="popup images/ihelp.gif" alt="Giphy Image" id="giphyImage" width="250" height="100">
+    </div>
+
+    <div id="buttons">
+        <button onclick="toggleDarkMode()"> <i class="bi bi-moon"></i> Toggle Dark Mode</button>
+        <button onclick="textToSpeech()"> <i class="bi bi-volume-up"></i> Text to Speech</button>
+        <button onclick="summarizeText()"> <i class="bi bi-file-earmark-text"></i> Summarize Text</button>
+
+        <!-- Added a new button for reading selected text -->
+        <button onclick="readSelectedText()"> <i class="bi bi-chat-quote"></i> Read Selected Text</button>
+    </div>
+
+    <!-- Include the popup.js script at the end of the body -->
+    <script src="popup.js"></script>
+</body>
+
+</html>
