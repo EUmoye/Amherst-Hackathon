@@ -1,0 +1,47 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    /* Change font family as needed */
+    background-color: antiquewhite;
+}
+
+#popUI {
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button {
+    background: none;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+    border-radius: 8px;
+    margin: 0 10px;
+    /* Adjust horizontal margins */
+    transition: background-color 0.3s ease;
+}
+
+/* Style icons within buttons */
+button i {
+    margin-right: 8px;
+}
+
+/* Style button hover effects */
+button:hover {
+    background-color: bisque;
+}
