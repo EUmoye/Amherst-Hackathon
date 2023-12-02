@@ -1,0 +1,36 @@
+html body {
+    height: 20%;
+    width: 20%;
+    background-color: antiquewhite;
+}
+
+/* .buttons {
+    color: burlywood;
+    text-align: center;
+    padding: 3px 3px 3px 3px;
+    border-radius: 50%;
+    border-spacing: 3px 3px 2px 2px;
+} */
+
+#buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 3px 3px;
+    margin: 5px;
+    border: none;
+    background-color: white;
+    color: black;
+    font-size: 10;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: beige;
+}
+
+button i {
+    margin-right: 5px;
+}
