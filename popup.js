@@ -25,3 +25,20 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('themeButton').addEventListener('click', changeTheme);
     document.getElementById('textToSpeechButton').addEventListener('click', textToSpeech);
 });
+
+function summarizeText() {
+    // Simulated summarized text, replace this with your actual summarized text
+    var summarizedText = "Summarized text...";
+
+    // Get the textSummaryContainer
+    var textSummaryContainer = document.getElementById("summarization-container");
+
+    // Show the text summary container
+    textSummaryContainer.style.display = "block";
+
+    // Get the textSummary element
+    var textSummaryElement = document.getElementById("textsummary");
+
+    // Set the content to display the summarized text
+    textSummaryElement.innerHTML = "<p>" + summarizedText + "</p>";
+}

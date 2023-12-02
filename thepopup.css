@@ -58,3 +58,8 @@ button:hover {
     font-size: 13;
     color: black;
 }
+
+.popup-container {
+    padding: 20px;
+    border: 2px solid burlywood;
+}
