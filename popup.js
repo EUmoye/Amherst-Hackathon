@@ -1,7 +1,4 @@
-// Example JavaScript code for popup.js
-document.addEventListener('DOMContentLoaded', function () {
-    // Your code to execute when the DOM is ready
-
+window.addEventListener('DOMContentLoaded', function () {
     // Example: Change the background color of the body
     document.body.style.backgroundColor = 'lightblue';
 
@@ -16,14 +13,43 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Example: Text-to-speech
-    function textToSpeech() {
-        // Your code for text-to-speech
+    function textToSpeech(selectedText) {
+        if (selectedText) {
+            // If there is selected text, speak it
+            speakText(selectedText);
+        } else {
+            // If no text is selected, get the entire page content and speak it
+            chrome.tabs.executeScript({
+                code: 'document.body.innerText;'
+            }, function (pageContent) {
+                speakText(pageContent[0]);
+            });
+        }
     }
 
-    // Attach event listeners or call functions based on user interactions
+    function speakText(text) {
+        var synth = window.speechSynthesis;
+        var utterance = new SpeechSynthesisUtterance(text);
+        synth.speak(utterance);
+    }
+
+    // Attach event listeners for buttons
     document.getElementById('summarizeButton').addEventListener('click', summarizePage);
-    document.getElementById('themeButton').addEventListener('click', changeTheme);
-    document.getElementById('textToSpeechButton').addEventListener('click', textToSpeech);
+
+    // Dynamically attach the click event for the Text to Speech button
+    document.getElementById('textToSpeechButton').addEventListener('click', function () {
+        chrome.tabs.executeScript({
+            code: 'window.getSelection().toString();'
+        }, function (selection) {
+            var selectedText = selection && selection.length > 0 ? selection[0] : null;
+            textToSpeech(selectedText);
+        });
+    });
+
+    // Example: Attach event listener for the "Summarize Text" button
+    document.getElementById('summarizeTextButton').addEventListener('click', function () {
+        summarizeText();
+    });
 });
 
 function summarizeText() {

@@ -18,16 +18,17 @@
     </div>
 
     <div class="button-container">
-        <button onclick="toggleDarkMode()">
+        <button>
             <i class="bi bi-moon"></i> Toggle Dark Mode
         </button>
-        <button onclick="textToSpeech()">
+        <button id= "textToSpeechButton">
             <i class="bi bi-volume-up"></i> Text to Speech
         </button>
-        <button onclick="summarizeText()">
+        <button id= "summarizeButton">
             <i class="bi bi-file-earmark-text"></i> Summarize Text
         </button>
     </div>
+    <script src="popup.js"></script>
 
     <div id="summarization-container" class="textsummarycontainer" style="display: none;">
         <div id="textsummary" class="thesummary"> </div>
