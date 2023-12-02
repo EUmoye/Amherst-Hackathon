@@ -45,3 +45,16 @@ button i {
 button:hover {
     background-color: bisque;
 }
+
+/* Style for the container */
+.summarization-container {
+    height: 200px;
+    overflow: auto;
+}
+
+/* Style for the textsummary */
+.textsummary {
+    padding: 10px;
+    font-size: 13;
+    color: black;
+}
