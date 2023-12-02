@@ -1,0 +1,37 @@
+{
+    "manifest_version": 2,
+    "name": "Popup Extension",
+    "version": "1.0",
+    "description": "A Chrome extension with multiple functions: summarize, change theme, and text-to-speech for accessibility purposes.",
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "activeTab"
+    ],
+    "icons": {
+        "48": "icon.png",
+        "128": "icon.png"
+    },
+    "commands": {
+        "summarize": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+S"
+            },
+            "description": "Summarize the page"
+        },
+        "changeTheme": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+T"
+            },
+            "description": "Change the theme"
+        },
+        "textToSpeech": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+V"
+            },
+            "description": "Text-to-speech"
+        }
+    }
+}
